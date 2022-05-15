@@ -33,8 +33,8 @@ letsdo.addEventListener("click", () => {
 
 const gettimediff = (diffMs) => {
   var diffHrs = Math.floor((diffMs % 86400000) / 3600000); // hours
-  var diffMins = Math.round(((diffMs % 86400000) % 3600000) / 60000); // minutes
-  var diffSec = Math.round(((diffMs % 86400000) % 3600000) / 1000); // minutes
+  var diffMins = Math.floor(((diffMs % 86400000) % 3600000) / 60000); // minutes
+  var diffSec = Math.round(((diffMs % 86400000) % 3600000) / 1000) % 60; // minutes
 
   return ` ${diffHrs} : ${diffMins} :${diffSec}`;
 };
